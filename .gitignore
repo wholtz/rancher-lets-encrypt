@@ -1,0 +1,8 @@
+*.cert
+*.key
+deploy_tmp/
+lib/
+*.swp
+*.tar
+*.gz
+*.zip

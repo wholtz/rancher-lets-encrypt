@@ -1,0 +1,16 @@
+﻿apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  labels:
+    cattle.io/creator: norman
+  name: lb
+spec:
+  rules:
+  - host: {{CERT_HOST_NAME}}
+    http:
+      paths:
+      - backend:
+          serviceName: get-cert 
+          servicePort: web-get-cert
+status:
+  loadBalancer: {}
